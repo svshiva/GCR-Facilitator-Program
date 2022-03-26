@@ -2,6 +2,11 @@
 > Created and Managed by [Shivam Vishwakarma](https://www.github.com/svshiva) 
 
 ---
+| | |
+|------|------|
+|[Prize](prize_rule.md)|[About Me](https://github.com/svshiva)
+
+---
 
 ### Track 1: Cloud Infrastructure Track
 
@@ -21,6 +26,7 @@
 [Google Cloud Essential Skills: Challenge Lab](track1/GoogleCloudEssentialSkills.md)
 
 [Monitor and Log with Google Cloud Operations Suite: Challenge Lab](track1/MonitorAndLogWithGoogleCloudOperationsSuite.md)
+
 
 ---
 

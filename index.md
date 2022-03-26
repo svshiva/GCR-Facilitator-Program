@@ -2,9 +2,8 @@
 > Created and Managed by [Shivam Vishwakarma](https://www.github.com/svshiva) 
 
 ---
-| | |
-|------|------|
-|[Prize](prize_rule.md)|[About Me](https://github.com/svshiva)
+
+|   [Prize Rule](prize_rule.md) 
 
 ---
 

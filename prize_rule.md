@@ -1,26 +1,22 @@
-## Rules for availing the prizes
+# Rules for availing the prizes
 To earn prizes in the program, you need to acheive some certain milestones - "The higher the milstones, the higher the prize!"
 
 See the milestones and the prizes associated with them below. We will record your progress on a daily basis and will evaluate it at the end of the program i.e. **20th June 2022** 11:59 PM.
 
 ---
 
-<details open>
-<summary> Milestone #1 - Complete any 10 quests & 5 skill badges in the program </summary>
+## Milestone #1 - Complete any 10 quests & 5 skill badges in the program 
 
     You can earn the prizes* given below by just completing any 10 quests & 5 skill badges that are part of the program.
 
 **Note**: Only the quest/skill badge completions after your enrolment date will be counted. Any quests/skill badges completed before the enrolment date won't be taken into account for this.
 ![prize](img/1.png)
 
-</details>
 
 ---
 
 
-<details>
-<summary>Milestone #2 - Complete any 20 quests & 10 skill badges in the program</summary>
-
+## Milestone #2 - Complete any 20 quests & 10 skill badges in the program
     You can earn the prizes* given below by just completing any 20 quests & 10 skill badges that are part of the program.
 
 **Note:**
@@ -29,12 +25,11 @@ See the milestones and the prizes associated with them below. We will record you
 
 ![prize](img/2.png)
 
-</details>
+
 
 ---
 
-<details>
-<summary>Milestone #3 - Complete any 30 quests & 15 skill badges in the program</summary>
+## Milestone #3 - Complete any 30 quests & 15 skill badges in the program
     
     You can earn the prizes* given below by just completing any 30 quests & 15 skill badges that are part of the program.
 
@@ -44,12 +39,10 @@ See the milestones and the prizes associated with them below. We will record you
 
 ![prize](img/3.png)
 
-</details>
 
 ---
 
-<details>
-<summary>Ultimate Milestone: Complete all 40 Quests & 20 Skill Badges</summary>
+## Ultimate Milestone: Complete all 40 Quests & 20 Skill Badges
     
     You can earn the prizes* given below by completing all 40 quests & 20 skill badges that are part of the program.
 
@@ -66,7 +59,6 @@ You can choose from 2 tracks in the program:
 1. Associate Cloud Engineer track
 2. Data Analyst track.
 
-</details>
 
 ---
 

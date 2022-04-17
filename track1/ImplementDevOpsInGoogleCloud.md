@@ -33,7 +33,9 @@ Now in console click on web preview button, and then click show on port 8080
 ![Image](img/web_preview.png)
 
 -   Now enter username : **admin**
--   and enter Password that you got from **previous command**
+-   and enter Password that you got from **previous command.**
+
+
 ---
 
 ### Adding your service account credentials

@@ -202,7 +202,7 @@ Now run following commands to push the code.
 
 
 
-**Congratulations! You completed this challenge lab.**
+**Congratulations! 🎉 You completed this challenge lab.**
 
 
 > Created and Managed by [Shivam Vishwakarma](https://www.github.com/svshiva) 

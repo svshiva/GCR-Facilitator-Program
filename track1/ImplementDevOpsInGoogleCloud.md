@@ -1,11 +1,11 @@
 # Implement DevOps in Google Cloud: Challenge Lab
+> Created and Managed by [Shivam Vishwakarma](https://www.github.com/svshiva) 
 
 
->Before starting the challenge labs,
-Go to Kubernets Cluster and check if jenkins-cd is present or not. 
+_Before starting the challenge labs,
+Go to Kubernets Cluster and check if jenkins-cd is present or not._
 
-
-#### **Task 1: Configure a Jenkins pipeline for continuous deployment to Kubernetes Engine**
+## **Task 1: Configure a Jenkins pipeline for continuous deployment to Kubernetes Engine**
 
 
 _Open Cloud console and run following commands_
@@ -119,3 +119,90 @@ _If you correctly configured the pipeline, you will see Finished: SUCCESS at the
 
 ---
 ## Task 2: Push an update to the application to a development branch
+
+>Now you have to do required changes to your website and push them in a development branch.
+
+- Goto SSH Window
+- Make sure you are in sample-app directory
+
+- Create a new development branch using folloing command 
+
+        git checkout -b new-feature
+
+- now you have to change 2 files
+> main.go and html.go, for this use any editor you like, vi or nano. I am giving instructions for nano.
+
+-   type
+        
+        nano main.go
+- **Search** for line
+
+        const version string = "1.0.0"
+- **Change** it to
+
+        const version string = "2.0.1"
+
+> To save it press Ctrl+X and then press Y and hit Enter.
+
+-   Open the html.go file and change the two instances of `<div class="card blue">` to `<div class="card green">`
+
+-   Now change html.go file
+
+        nano html.go
+- **Find 2 instances** of line 
+
+        <div class="card blue">
+-   **Change it to** 
+
+        <div class="card green">
+
+> **Remember you have to change 2 lines in html.go**
+
+> To save it press Ctrl+X and then press Y and hit Enter
+
+
+Now run following commands to push the code.
+
+    git config --global user.email "you@example.com"
+    git config --global user.name "Your Name"
+    git add .
+    git commit -m "Version 2.0.1"
+    git push origin new-feature
+
+-   Go to the Jenkins user interface, and check if new build is running for your new branch wait till it gets completed.
+
+-   Go and check your progress.
+
+## Task 3: Push a Canary deployment to the production namespace
+
+1.  Go back to the SSH window, run the following command to create a canary branch in the sample-app directory.
+    
+        git checkout -b canary
+
+2.Merge the change from the development branch:
+
+        git merge new-feature
+
+3. Push the canary to the Git server:
+
+        git push origin canary
+
+4.  Go to the Jenkins user interface, and check if new build is running for your **canary** branch wait till it gets completed.
+
+---
+## Task 4: Promote the Canary Deployment to production
+
+1. Go back to the SSH window, run the following commands to merge the canary branch, and push it to the Git server.
+
+        git checkout master
+        git merge canary
+        git push origin master
+
+2.  Go to the Jenkins user interface, and check if new build is running for your **canary** branch wait till it gets completed.
+
+
+
+**Congratulations! You completed this challenge lab.**
+
+
+> Created and Managed by [Shivam Vishwakarma](https://www.github.com/svshiva) 

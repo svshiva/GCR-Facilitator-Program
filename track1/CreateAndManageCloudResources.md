@@ -8,7 +8,7 @@ Create Instance with following values
 -   Machine Type: **f1-micro**
 -   Use the default image type (Debian Linux).
 
-
+---
 
 ## Task 2: Create a Kubernetes service cluster
 ```
@@ -24,10 +24,12 @@ kubectl expose deployment hello-app --type=LoadBalancer --port 8080
 
 kubectl get service 
 ```
+---
 
 ## Task 3: Setup an HTTP load balancer
 
 ### Open the cloud shell and Copy and Paste the following commands
+
 
 ```
 cat << EOF > startup.sh
@@ -40,7 +42,7 @@ EOF
 ```
 
 
-1.   Create an instance template :
+-   **Create an instance template :**
 
 ```
 gcloud compute instance-templates create nginx-template \
@@ -48,13 +50,13 @@ gcloud compute instance-templates create nginx-template \
 
 ```
 
-2.   Create a target pool :
+-   **Create a target pool :**
 
 ```
 gcloud compute target-pools create nginx-pool
 ```
 
-3.   Create a managed instance group :
+- **Create a managed instance group :**
 
 ```
 gcloud compute instance-groups managed create nginx-group \
@@ -66,7 +68,7 @@ gcloud compute instance-groups managed create nginx-group \
 gcloud compute instances list
 ```
 
-4. Create a firewall rule to allow traffic (80/tcp) :
+- **Create a firewall rule to allow traffic (80/tcp) :**
 
 ```
 gcloud compute firewall-rules create www-firewall --allow tcp:80
@@ -79,7 +81,7 @@ gcloud compute forwarding-rules create nginx-lb \
 gcloud compute forwarding-rules list
 ```
 
-5. Create a health check :
+- **Create a health check :**
 
 ```
 gcloud compute http-health-checks create http-basic-check
@@ -89,7 +91,7 @@ set-named-ports nginx-group \
 --named-ports http:80
 ```
 
-6. Create a backend service and attach the manged instance group :
+- **Create a backend service and attach the manged instance group :**
 
 ```
 gcloud compute backend-services create nginx-backend \
@@ -101,7 +103,7 @@ gcloud compute backend-services add-backend nginx-backend \
 --global
 ```
 
-7. Create a URL map and target HTTP proxy to route requests to your URL map :
+- **Create a URL map and target HTTP proxy to route requests to your URL map :**
 
 ```
 gcloud compute url-maps create web-map \
@@ -111,7 +113,7 @@ gcloud compute target-http-proxies create http-lb-proxy \
 --url-map web-map
 ```
 
-8. Create a forwarding rule :
+-   **Create a forwarding rule :**
 
 ```
 gcloud compute forwarding-rules create http-content-rule \
@@ -120,7 +122,7 @@ gcloud compute forwarding-rules create http-content-rule \
 --ports 80
 ```
 
-9. Check you rule
+-   **Check you rule**
 
 ```
 gcloud compute forwarding-rules list
@@ -131,8 +133,9 @@ gcloud compute forwarding-rules list
 Now Check your progress
 
 ### **Congratulations! You completed this challenge lab.**
+---
 
-View Solution to More Challenge Labs:
+>View Solution to More Challenge Labs:
 
 [Perform Foundational Infrastructure Tasks in Google Cloud: Challenge Lab](track1/PerformFoundationalInfrastructureTasksInGoogleCloud.md)
 

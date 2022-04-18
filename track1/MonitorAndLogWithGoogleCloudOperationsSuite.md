@@ -1,4 +1,4 @@
-# GSP338 —— Monitor and Log with Google Cloud Operations Suite
+# Monitor and Log with Google Cloud Operations Suite
 
 <div align="center">
   <img src="https://i.imgur.com/pXwuLP9.png" alt="GSP338 —— Monitor and Log with Google Cloud Operations Suite">

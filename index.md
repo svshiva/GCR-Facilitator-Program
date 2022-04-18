@@ -8,7 +8,7 @@
 
 ---
 
-|   [Prize Rule](prize_rule.md) 
+|   [Prize Rule](prize_rule.md) | [View Repository](https://github.com/svshiva/GCR-Facilitator-Program) |
 
 ---
 

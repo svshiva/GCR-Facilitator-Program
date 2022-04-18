@@ -1,4 +1,9 @@
-<link rel="shortcut icon" type="image/x-icon" href="img/favicon.svg">
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6518075863441019"
+     crossorigin="anonymous"></script>
+
+
 > Created and Managed by [Shivam Vishwakarma](https://www.github.com/svshiva) 
 
 ---

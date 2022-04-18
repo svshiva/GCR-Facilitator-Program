@@ -1,4 +1,4 @@
-
+<link rel="shortcut icon" type="image/x-icon" href="img/favicon.svg">
 > Created and Managed by [Shivam Vishwakarma](https://www.github.com/svshiva) 
 
 ---

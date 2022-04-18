@@ -28,6 +28,7 @@ kubectl get service
 ## Task 3: Setup an HTTP load balancer
 
 ### Open the cloud shell and Copy and Paste the following commands
+
 ```
 cat << EOF > startup.sh
 #! /bin/bash
@@ -40,6 +41,7 @@ EOF
 
 
 1.   Create an instance template :
+
 ```
 gcloud compute instance-templates create nginx-template \
 --metadata-from-file startup-script=startup.sh
@@ -47,6 +49,7 @@ gcloud compute instance-templates create nginx-template \
 ```
 
 2.   Create a target pool :
+
 ```
 gcloud compute target-pools create nginx-pool
 ```

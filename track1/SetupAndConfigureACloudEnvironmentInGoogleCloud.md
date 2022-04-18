@@ -11,19 +11,22 @@ As soon as you sit down at your desk and open your new laptop you receive the fo
 
 * Run the following from the **Cloud Terminal**:
 
-```yaml
+```
+yaml
 gcloud compute networks create griffin-dev-vpc --subnet-mode custom
 
 gcloud compute networks subnets create griffin-dev-wp --network=griffin-dev-vpc --region us-east1 --range=192.168.16.0/20
 
 gcloud compute networks subnets create griffin-dev-mgmt --network=griffin-dev-vpc --region us-east1 --range=192.168.32.0/20
 ```
+---
 
 ### Task 2: Create production VPC using Deployment Manager
 
 * Run the following from the **Cloud Terminal**:
 
-```yaml
+```
+
 gsutil cp -r gs://cloud-training/gsp321/dm .
 
 cd dm
@@ -33,12 +36,14 @@ sed -i s/SET_REGION/us-east1/g prod-network.yaml
 gcloud deployment-manager deployments create prod-network \
     --config=prod-network.yaml
 ```
+---
 
 ### Task 3: Create bastion host
 
 * Run the following from the **Cloud Terminal**:
 
-```yaml
+```
+
 cd ..
 
 gcloud compute instances create bastion --network-interface=network=griffin-dev-vpc,subnet=griffin-dev-mgmt  --network-interface=network=griffin-prod-vpc,subnet=griffin-prod-mgmt --tags=ssh --zone=us-east1-b
@@ -47,12 +52,13 @@ gcloud compute firewall-rules create fw-ssh-dev --source-ranges=0.0.0.0/0 --targ
 
 gcloud compute firewall-rules create fw-ssh-prod --source-ranges=0.0.0.0/0 --target-tags ssh --allow=tcp:22 --network=griffin-prod-vpc
 ```
+---
 
 ### Task 4: Create and configure Cloud SQL Instance
 
 * Run the following from the **Cloud Terminal**:
 
-```yaml
+```
 gcloud sql instances create griffin-dev-db --root-password password --region=us-east1
 
 gcloud sql connect griffin-dev-db
@@ -65,12 +71,13 @@ FLUSH PRIVILEGES;
 # Use the following to get out of the SQL terminal
 exit;
 ```
+---
 
 ### Task 5: Create Kubernetes cluster
 
 * Run the following from the **Cloud Terminal**:
 
-```yaml
+```
 gcloud container clusters create griffin-dev \
   --network griffin-dev-vpc \
   --subnetwork griffin-dev-wp \
@@ -80,12 +87,13 @@ gcloud container clusters create griffin-dev \
   
 gcloud container clusters get-credentials griffin-dev --zone us-east1-b
 ```
+---
 
 ### Task 6: Prepare the Kubernetes cluster
 
 * Run the following from the **Cloud Terminal**:
 
-```yaml
+```
 gsutil cp -r gs://cloud-training/gsp321/wp-k8s .
 
 cd wp-k8s
@@ -102,12 +110,14 @@ gcloud iam service-accounts keys create key.json \
 kubectl create secret generic cloudsql-instance-credentials \
     --from-file key.json
 ```
+---
+
 
 ### Task 7: Create a WordPress deployment
 
 * Run the following from the **Cloud Terminal**:
 
-```yaml
+```
 # Use the following for replace YOUR_SQL_INSTANCE with "griffin-dev-db"
 I=$(gcloud sql instances describe griffin-dev-db --format="value(connectionName)")
 
@@ -117,6 +127,7 @@ kubectl create -f wp-deployment.yaml
 
 kubectl create -f wp-service.yaml
 ```
+---
 
 ### Task 8: Enable monitoring
 
@@ -126,6 +137,8 @@ kubectl create -f wp-service.yaml
 4. Now enter the info as below:
 
 <img width=600 src="screenshots/uptime.png" alt="Uptime check" />
+
+---
 
 ### Task 9: Provide access for an additional engineer
 

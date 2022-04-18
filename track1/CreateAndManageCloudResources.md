@@ -77,6 +77,7 @@ gcloud compute forwarding-rules list
 ```
 
 5. Create a health check :
+
 ```
 gcloud compute http-health-checks create http-basic-check
 
@@ -86,6 +87,7 @@ set-named-ports nginx-group \
 ```
 
 6. Create a backend service and attach the manged instance group :
+
 ```
 gcloud compute backend-services create nginx-backend \
 --protocol HTTP --http-health-checks http-basic-check --global
@@ -95,7 +97,9 @@ gcloud compute backend-services add-backend nginx-backend \
 --instance-group-zone us-east1-b \
 --global
 ```
+
 7. Create a URL map and target HTTP proxy to route requests to your URL map :
+
 ```
 gcloud compute url-maps create web-map \
 --default-service nginx-backend
@@ -103,7 +107,9 @@ gcloud compute url-maps create web-map \
 gcloud compute target-http-proxies create http-lb-proxy \
 --url-map web-map
 ```
+
 8. Create a forwarding rule :
+
 ```
 gcloud compute forwarding-rules create http-content-rule \
 --global \
@@ -112,6 +118,7 @@ gcloud compute forwarding-rules create http-content-rule \
 ```
 
 9. Check you rule
+
 ```
 gcloud compute forwarding-rules list
 ```

@@ -1,10 +1,11 @@
 ## Task 1: Create a project jumphost instance
 
 Navigation menu > Compute engine > VM Instance
+
 Create Instance with following values
 
 -   Name: nucleus-jumphost (Or as defined in Lab Manual)
--   Machine Type: fi-micro
+-   Machine Type: **f1-micro**
 -   Use the default image type (Debian Linux).
 
 
@@ -42,14 +43,16 @@ EOF
 ```
 gcloud compute instance-templates create nginx-template \
 --metadata-from-file startup-script=startup.sh
+
 ```
 
 2.   Create a target pool :
-
 ```
 gcloud compute target-pools create nginx-pool
 ```
+
 3.   Create a managed instance group :
+
 ```
 gcloud compute instance-groups managed create nginx-group \
 --base-instance-name nginx \
@@ -61,6 +64,7 @@ gcloud compute instances list
 ```
 
 4. Create a firewall rule to allow traffic (80/tcp) :
+
 ```
 gcloud compute firewall-rules create www-firewall --allow tcp:80
 

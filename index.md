@@ -1,8 +1,9 @@
 
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6518075863441019"
-     crossorigin="anonymous"></script>
-
+<head>
+     
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6518075863441019" crossorigin="anonymous"></script>
+     
+</head>
 
 > Created and Managed by [Shivam Vishwakarma](https://www.github.com/svshiva) 
 

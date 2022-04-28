@@ -12,6 +12,8 @@
 |   [Prize Rule](prize_rule.md) | [View Repository](https://github.com/svshiva/GCR-Facilitator-Program) | [Tracks](tracks.md)
 
 ---
+## Challenge Lab Solutions
+
 
 ### Track 1: Cloud Infrastructure Track
 
